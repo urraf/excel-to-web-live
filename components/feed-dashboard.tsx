@@ -25,7 +25,7 @@ const DEFAULT_SPREADSHEETS = [
   // Add more spreadsheets as needed
   {
     name: "Secondary Spreadsheet",
-    spreadsheetId: "1vSF7UAPWRsTMfExdZaDM9MBqUd_lq6TqbYYzNPKo_Rk", // Replace with actual ID
+    spreadsheetId: "PLACEHOLDER_ID_REPLACE_ME", // Replace with actual ID
     sheets: [{ name: "Main Sheet", sheetId: "0" }],
   },
 ]
@@ -67,13 +67,13 @@ export function FeedDashboard() {
   }
 
   return (
-    <div className="space-y-6">
-      <Card>
-        <CardHeader>
-          <CardTitle>Feed Settings</CardTitle>
-          <CardDescription>Select a spreadsheet, sheet, and configure display options</CardDescription>
+    <div className="space-y-8">
+      <Card className="glass-card overflow-hidden border-0 bg-black/40 backdrop-blur-xl">
+        <CardHeader className="bg-white/5 border-b border-white/10">
+          <CardTitle className="text-glow text-xl">Feed Configuration</CardTitle>
+          <CardDescription className="text-gray-400">Select a spreadsheet, sheet, and configure display options</CardDescription>
         </CardHeader>
-        <CardContent>
+        <CardContent className="pt-6">
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             <div className="space-y-2">
               <h3 className="text-sm font-medium">Spreadsheet</h3>

@@ -10,7 +10,7 @@ interface FeedItemListProps {
 
 export function FeedItemList({ items }: FeedItemListProps) {
   return (
-    <div className="border rounded-md overflow-hidden">
+    <div className="glass-card border-white/10 rounded-xl overflow-hidden bg-black/20">
       <Table>
         <TableHeader>
           <TableRow>
@@ -23,9 +23,11 @@ export function FeedItemList({ items }: FeedItemListProps) {
         <TableBody>
           {items.map((item, index) => (
             <TableRow key={index}>
-              <TableCell className="font-medium">{item.title}</TableCell>
+              <TableCell className="font-medium">
+                <span dangerouslySetInnerHTML={{ __html: item.title }} />
+              </TableCell>
               <TableCell className="text-muted-foreground truncate max-w-xs">
-                {item.description || "No description"}
+                <span dangerouslySetInnerHTML={{ __html: item.description || "No description" }} />
               </TableCell>
               <TableCell>{formatDate(item.pubDate)}</TableCell>
               <TableCell>

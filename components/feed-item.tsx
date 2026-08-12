@@ -10,9 +10,9 @@ interface FeedItemProps {
 
 export function FeedItem({ item }: FeedItemProps) {
   return (
-    <Card className="h-full flex flex-col">
-      <CardHeader>
-        <CardTitle className="line-clamp-2">{item.title}</CardTitle>
+    <Card className="h-full flex flex-col glass-card border-white/10 bg-black/20 hover:bg-black/40 transition-all duration-300">
+      <CardHeader className="border-b border-white/5 pb-4">
+        <CardTitle className="line-clamp-2" dangerouslySetInnerHTML={{ __html: item.title }} />
         {item.pubDate && (
           <CardDescription className="flex items-center gap-1">
             <Calendar className="h-3 w-3" />
@@ -21,7 +21,10 @@ export function FeedItem({ item }: FeedItemProps) {
         )}
       </CardHeader>
       <CardContent className="flex-grow">
-        <p className="text-muted-foreground line-clamp-3">{item.description || "No description available"}</p>
+        <div 
+          className="text-muted-foreground line-clamp-3" 
+          dangerouslySetInnerHTML={{ __html: item.description || "No description available" }} 
+        />
       </CardContent>
       <CardFooter>
         {item.link && (
