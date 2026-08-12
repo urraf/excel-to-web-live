@@ -1,7 +1,7 @@
 # Google Sheets RSS Feed Viewer
 
 A modern, responsive web application that displays and automatically refreshes RSS feed data from Google Sheets. This application allows users to view, search, sort, and filter feed items from multiple spreadsheets and sheets.
-
+excel file - https://docs.google.com/spreadsheets/d/1vSF7UAPWRsTMfExdZaDM9MBqUd_lq6TqbYYzNPKo_Rk/edit?pli=1&gid=769016024#gid=769016024 
 https://drive.google.com/file/d/1X0Wj0tEEupZ6H2jokRyGQoA4r8HKlK4C/view?usp=drive_link
 
 ## Features
